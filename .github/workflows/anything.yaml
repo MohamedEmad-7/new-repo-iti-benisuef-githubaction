@@ -22,8 +22,8 @@ jobs:
   Job_1:
     runs-on: ubuntu-latest  # RUNNER  VM == Runner  vm109ddcmwicsi
     steps:
-        # - name: checkout code # step 0
-        #   uses: actions/checkout@v7 # action
+        - name: checkout code # step 0
+          uses: actions/checkout@v7 # action
 
         - name: ls the repo # step 0
           run: ls -la | grep README.md # command
