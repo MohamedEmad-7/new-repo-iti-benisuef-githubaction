@@ -31,6 +31,11 @@ jobs:
         - name: Run a script # step 1
           run: echo "Hello, world!"  >> output.txt # command
 
+        - uses: actions/upload-artifact@v7
+          with:
+            path: output.txt
+            name: output.txt
+            
         - name: read output.txt # step 2
           run: cat output.txt # command
 
