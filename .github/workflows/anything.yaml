@@ -25,12 +25,15 @@ jobs:
         - name: Run a script # step 1
           run: echo "Hello, world!"  >> output.txt # command
 
+        - name: read output.txt # step 2
+          run: cat output.txt # command
+
 
 
 
 
   Job_2:
-    needs: Job_1
+    # needs: Job_1
     runs-on: ubuntu-latest  # RUNNER  VM == Runner   vm=jjncwjcnwijn
     steps:
         - name: read output.txt # step 2
