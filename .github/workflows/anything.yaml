@@ -60,5 +60,8 @@ jobs:
             path: output.txt
             name: output.txt
 
+        - name: ls the repo # step 0
+          run: ls -la 
+
         - name: read output.txt # step 2
           run: cat output.txt # command
