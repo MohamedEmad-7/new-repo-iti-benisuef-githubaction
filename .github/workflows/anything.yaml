@@ -43,10 +43,7 @@ jobs:
         #   uses: actions/setup-node@v7 # action
 
 
-        # - name: setup python # step 4
-        #   uses: actions/setup-python@v7
-        #   with:
-        #     python-version: '3.13' 
+
 
 
 
@@ -57,7 +54,7 @@ jobs:
     steps:
         - uses: actions/download-artifact@v8
           with:
-            # path: output.txt
+            path: output.txt
             name: output.txt
 
         - name: ls the repo # step 0
@@ -65,3 +62,9 @@ jobs:
 
         - name: read output.txt # step 2
           run: cat output.txt # command
+          continue-on-error: true
+
+        - name: setup python # step 4
+          uses: actions/setup-python@v7
+          with:
+            python-version: '3.13' 
