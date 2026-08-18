@@ -67,6 +67,12 @@ jobs:
             python-version: '3.13' 
 
 
+        - name: run a script # step 5
+          run: echo "Hello, world!"  >> output.txt # command
+
+          
+
+
         
         - name: setup node # step 3
           if: always()  # always, success, failure, always()
