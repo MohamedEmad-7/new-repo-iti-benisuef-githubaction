@@ -1,0 +1,37 @@
+# anything.yaml
+
+
+# optional: name of the workflow
+name: anything
+
+# ON EVENTS 
+on:
+  push: # push to the repository
+    # branches:
+    #   - main
+    # paths:
+    #   - '*.md'
+#   pull_request: # pull request to the repository
+  workflow_dispatch: # manual trigger of the workflow
+#   schedule: # schedule the workflow to run at a specific time
+
+# JOBS
+
+
+jobs:
+  Job_1:
+    runs-on: ubuntu-latest  # RUNNER  VM == Runner  vm109ddcmwicsi
+    steps:
+        - name: Run a script # step 1
+          run: echo "Hello, world!"  >> output.txt # command
+
+
+
+
+
+  Job_2:
+    needs: Job_1
+    runs-on: ubuntu-latest  # RUNNER  VM == Runner   vm=jjncwjcnwijn
+    steps:
+        - name: read output.txt # step 2
+          run: cat output.txt # command
