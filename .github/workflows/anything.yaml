@@ -26,7 +26,7 @@ jobs:
         #   uses: actions/checkout@v7 # action
 
         - name: ls the repo # step 0
-          run: ls -la # command
+          run: ls -la | grep README.md # command
 
         - name: Run a script # step 1
           run: echo "Hello, world!"  >> output.txt # command
